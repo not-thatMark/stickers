@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="Task" [(ngModel)]="todo.task"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" placeHolder="priority"[(ngModel)]="todo.priority"></ion-input> 
+    </ion-item>
+   <ion-item>
+     <img [src]="currentImage" *ngIf="currentImage"></ion-item>
+  </ion-list>
+  <ion-button expand="full"> 
+    <ion-icon name="camera" (click)="takePicture()"></ion-icon>
+  </ion-button>
+  <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
+</ion-content>

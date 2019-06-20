@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-content">
+    <ion-row class="logo-row">
+        <ion-col></ion-col>
+        <ion-col width-67>
+          <img src="../../assets/icon/logo.png"/>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+    <ion-row class="logo-row">
+        <ion-col></ion-col>
+        <ion-col width-67><h2>Welcome :))))</h2></ion-col >
+        <ion-col></ion-col>
+    </ion-row>
+  <div class="login-box">
+      <form id="register" [formGroup] = "registerForm" (submit) = "register(registerForm.value)">
+          <ion-row>
+            <ion-col>
+              <ion-list inset>
+                  <ion-item>
+                      <ion-label>Email</ion-label>
+                      <ion-input type="email" placeholder="email@example.com" formControlName="email"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>Password</ion-label>
+                      <ion-input type="password" placeholder="minimum 6 characters" formControlName="password"></ion-input>
+                    </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="singup-col">
+                <ion-button  class="sign-up-btn" type="submit" [disabled]="!registerForm.valid">
+                    Register
+                  </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col  class="singup-col">
+                <ion-card-subtitle lines="none" expand="full">
+                    Already have an account? <a routerLink="/login">Login</a>
+                  </ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+        </form>
+  </div>
+  
+</ion-content>

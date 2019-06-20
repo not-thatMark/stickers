@@ -1,0 +1,44 @@
+
+.login-content {
+    
+    
+    .login-box {
+      background:#304D6D;
+      border-radius:25px;
+      padding: 10px 10px 0px 10px;
+      
+    }
+ 
+    ion-row {
+       align-items: center;
+       text-align: center;
+     }
+ 
+     ion-item {
+         border-radius: 30px !important;
+         padding-left: 30px !important;
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border-bottom: 0px !important;
+         box-shadow: none !important;
+     }
+ 
+     .signup-col {
+       margin: 0px 16px 0px 16px;
+       padding-bottom: 20px;
+       align-items: center;
+       text-align: center;
+       color:white;
+     }
+     ion-card-subtitle{
+         color:black;
+     }
+    
+ 
+     .submit-btn {
+       background: #51CFB1;
+       border-radius: 30px !important;
+       
+     }
+    
+    }
